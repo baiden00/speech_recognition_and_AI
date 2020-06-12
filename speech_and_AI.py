@@ -35,9 +35,9 @@ microphone = sr.Microphone()
 
 
 
-def initSpeech():
+def Speech():
     #to signify the beginning of the recording
-    play("/Users/baidench/Desktop/speech/confident.wav")
+    play("/Users/baidench/Documents/GitHub/speech_recognition_and_AI/confident.wav")
 
     #listening from the user's microphone
     with microphone as source:
@@ -45,7 +45,7 @@ def initSpeech():
         audio = recognize.listen(source)
 
     #to signify the end of the recording
-    play("/Users/baidench/Desktop/speech/case-closed.wav")
+    play("/Users/baidench/Documents/GitHub/speech_recognition_and_AI/case-closed.wav")
     print("Recorded")
 
     command = ""
@@ -84,5 +84,5 @@ def initSpeech():
         subprocess.call('wsay "hey there" ')
 
 
-    #responding to speech asking for name
-initSpeech()
+
+Speech()
